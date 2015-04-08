@@ -10,8 +10,7 @@
   "author": "John Fawcett",
   "license": "ISC",
   "dependencies": {
-    "leFunc": "^1.2.5",
-    "lodash": "^3.6.0"
+    "leFunc": "^1.2.5"
   },
   "jshint": {
     "laxcomma": true,

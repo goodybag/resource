@@ -23,8 +23,32 @@ define(function(require, exports, module){
     return params.substring(0, params.length - 1);
   };
 
-  module.exports.defaults = require('lodash/object/defaults');
-  module.exports.extend = require('lodash/object/extend');
+  module.exports.defaults = function( a, b ){
+    a = a || {};
+
+    for ( var k in b ){
+      if ( !(k in a) ) a[ k ] = b[ k ];
+    }
+
+    return a;
+  };
+
+  module.exports.extend = function( target ){
+    var k, source;
+    var sources = [].slice.call( arguments, 1 );
+
+    while ( sources.length ){
+      source = sources.shift();
+
+      if ( !source ) continue;
+
+      for ( k in source ){
+        target[ k ] = source[ k ];
+      }
+    }
+
+    return target;
+  };
 
   return module.exports;
 });
