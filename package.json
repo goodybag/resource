@@ -1,12 +1,11 @@
 {
-  "name": "resource",
+  "name": "resource.js",
   "version": "1.0.0",
   "description": "Get yo' food on, yo'",
   "main": "index.js",
+  "repository": "https://github.com/goodybag/resource",
   "scripts": {
-    "test": "gulp test && mocha -R spec test/test.js",
-    "prestart": "gulp build",
-    "start": "node app.js"
+    "test": "gulp test && mocha -R spec test/test.js"
   },
   "author": "John Fawcett",
   "license": "ISC",
